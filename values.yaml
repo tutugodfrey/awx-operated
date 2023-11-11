@@ -1,0 +1,3 @@
+AWX:
+ # enable use of awx-deploy template
+ enabled: yes

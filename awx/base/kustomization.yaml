@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - awx-deploy.yaml
+  - clusterrole-awx-operator-metrics-reader.yaml
+  - clusterrole-awx-operator-proxy-role.yaml
+  - clusterrolebinding-awx-operator-proxy-rolebinding.yaml
+  - configmap-awx-operator-awx-manager-config.yaml
+  - deployment-awx-operator-controller-manager.yaml
+  - role-awx-operator-awx-manager-role.yaml
+  - role-awx-operator-leader-election-role.yaml
+  - rolebinding-awx-operator-awx-manager-rolebinding.yaml
+  - rolebinding-awx-operator-leader-election-rolebinding.yaml
+  - service-awx-operator-controller-manager-metrics-service.yaml
+  - serviceaccount-awx-operator-controller-manager.yaml
