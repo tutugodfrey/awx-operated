@@ -1,0 +1,12 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWXBackup
+metadata:
+  name: awxbackup
+  namespace: awx
+spec:
+  deployment_name:  awx
+  postgres_configuration_secret: awx-postgres-configuration
+  set_self_labels: true
+  no_log: false
+  precreate_partition_hours: 0
+

@@ -1,0 +1,29 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: awx-restore-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumeclaims
+  - namespaces
+  - pods
+  - deployments
+  - statefulsets
+  - secrets
+  - configmaps
+  - pods/exec
+  verbs:
+  - get
+  - list
+  - create
+  - delete
+- apiGroups:
+  - awx.ansible.com
+  resources:
+  - awxbackups
+  verbs:
+  - get
+  - list

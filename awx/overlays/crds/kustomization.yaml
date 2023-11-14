@@ -5,10 +5,4 @@ kind: Kustomization
 namespace: awx
 
 resources:
-- ../base
-- namespace.yaml
-
-patches:
-- path: awx.yaml
-  target: 
-    kind: AWX
+- ../../base/crds
