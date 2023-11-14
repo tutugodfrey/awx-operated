@@ -1,0 +1,14 @@
+---
+# Source: awx-operator/templates/awx-deploy.yaml
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: default
+spec:
+  admin_user: admin
+  security_context_settings:
+    runAsGroup: 0
+    runAsUser: 0
+    fsGroup: 0
+    fsGroupChangePolicy: OnRootMismatch
