@@ -5,3 +5,18 @@ metadata:
   name: awx
 spec:
   service_type: nodeport
+  ipv6_disabled: true
+ # init_container_image: docker.artifactory.com/ansible/awx-ee
+  init_container_image_version: latest
+ # redis_image: docker.artifactory.com/redis
+  redis_image_version: 7.0.6
+ # control_plane_ee_image: docker.artifactory.com/ansible/awx-ee:latest
+ # image: docker.artifactory.com/ansible/awx
+  image_version: 22.3.0
+ # postgres_image: docker.artifactory.com/postgres
+  postgres_image_version: "13"
+#  image_pull_secret: imagepull
+  image_pull_policy: IfNotPresent
+  admin_password_secret: awx-admin-password
+  postgres_configuration_secret: awx-postgres-configuration
+  no_log: false
