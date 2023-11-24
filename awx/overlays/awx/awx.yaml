@@ -12,7 +12,7 @@ spec:
   redis_image_version: 7.0.6
  # control_plane_ee_image: docker.artifactory.com/ansible/awx-ee:latest
  # image: docker.artifactory.com/ansible/awx
-  image_version: 22.3.0
+  image_version: 22.8.0
  # postgres_image: docker.artifactory.com/postgres
   postgres_image_version: "13"
 #  image_pull_secret: imagepull

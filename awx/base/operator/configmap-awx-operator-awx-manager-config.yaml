@@ -13,6 +13,8 @@ data:
     leaderElection:
       leaderElect: true
       resourceName: 811c9dc5.ansible.com
+      leaseDuration: 30s
+      renewDeadline: 20s
     # leaderElectionReleaseOnCancel defines if the leader should step down volume
     # when the Manager ends. This requires the binary to immediately end when the
     # Manager is stopped, otherwise, this setting is unsafe. Setting this significantly
